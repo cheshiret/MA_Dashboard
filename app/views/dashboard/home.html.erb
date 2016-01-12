@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Migration Automation Dashboard</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="padding-top:55px;">
+<%= render 'layouts/header' %>
+<div class="container">
+  <h2>Test Cases #</h2>
+  <ul id="casecount">
+    <li><%= @list_count %></li>
+  </ul>
+
+  <h2>Test Cases List</h2>
+  <ul id="casename">
+    <% @list.each do |c| %>
+        <li><%= c.casename -%></li>
+    <% end %>
+  </ul>
+</div>
+<%= render 'layouts/footer' %>
+</body>
+</html>
+
+
+
