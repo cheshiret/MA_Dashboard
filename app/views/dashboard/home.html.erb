@@ -20,6 +20,28 @@
         <li><%= c.casename -%></li>
     <% end %>
   </ul>
+  <h2> Test Result</h2>
+
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Summary</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @testresult.each do |l| %>
+        <tr>
+          <td><%= l.case_id %></td>
+          <td><%= l.case_name %></td>
+          <td><%= l.machine %></td>
+          <td><%= l.awo_version %></td>
+          <td><%= l.test_result %></td>
+        </tr>
+    <% end %>
+  </table>
+
 </div>
 <%= render 'layouts/footer' %>
 </body>
