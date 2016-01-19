@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (4.1.8)
       actionpack (= 4.1.8)
@@ -52,6 +52,7 @@ GEM
     mime-types (2.99)
     minitest (5.8.3)
     multi_json (1.11.2)
+    mysql2 (0.3.20)
     mysql2 (0.3.20-x86-mingw32)
     rack (1.5.5)
     rack-test (0.6.3)
@@ -107,6 +108,7 @@ GEM
     will_paginate (3.0.3)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
@@ -123,4 +125,4 @@ DEPENDENCIES
   will_paginate (= 3.0.3)
 
 BUNDLED WITH
-   1.11.0
+   1.11.2

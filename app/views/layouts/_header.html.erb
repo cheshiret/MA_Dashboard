@@ -1,0 +1,11 @@
+<header class="header">
+  <div class="container">
+    <div class="masthead">
+      <ul class="nav nav-justified">
+        <li class="<%= 'active' if current_page?(root_path) %>">><%= link_to "Home", root_path %></li>
+        <li class="<%= 'active' if current_page?(graph_path) %>"><%= link_to "Graph", graph_path %></li>
+        <li class="<%= 'active' if current_page?(testcase_path) %>"><%= link_to "TestCase",testcase_path %></li>
+      </ul>
+    </div>
+  </div>
+</header>

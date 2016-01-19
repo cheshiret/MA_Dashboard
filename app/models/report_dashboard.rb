@@ -12,6 +12,7 @@ class ReportDashboard < ActiveRecord::Base
 end
 
 class TestCases < ActiveRecord::Base
+  establish_connection :development
   self.table_name = 'test_cases'
   self.primary_key='id'
 end
