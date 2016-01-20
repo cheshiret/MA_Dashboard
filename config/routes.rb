@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
-  #get 'dashboard/home'
 
+  resources :dashboard
   root to: 'dashboard#home'
-  match '/graph', to: 'dashboard#graph', via: 'get'
-  match '/testcase', to: 'dashboard#testcase', via: 'get'
+  get '/graph' => 'dashboard#graph'
+  get '/testcase' => 'dashboard#testcase'
+
+
+  #match '/graph', to: 'dashboard#graph', via: 'get'
+  #match '/testcase', to: 'dashboard#testcase', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-#  resources :dashboard
-#  root 'dashboard#home'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

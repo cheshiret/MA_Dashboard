@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
+<div class="container">
 <h2> Test Result</h2>
 
-<table>
+<table class="table">
   <tr>
-    <th>Title</th>
-    <th>Summary</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>CaseID</th>
+    <th>CaseName</th>
+    <th>Machine</th>
+    <th>VERSION</th>
+    <th>TestResult</th>
   </tr>
 
-  <%= @testresult.each do |l| %>
+  <% @testresult.each do |l| %>
       <tr>
         <td><%= l.case_id %></td>
         <td><%= l.case_name %></td>
