@@ -1,6 +1,6 @@
 == README
 
-{Build Status}[https://travis-ci.org/cheshiret/MA_Dashboard.svg?branch=master]
+{rdoc-image:https://travis-ci.org/cheshiret/MA_Dashboard.svg?branch=master}[Build Status]
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
