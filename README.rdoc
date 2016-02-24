@@ -12,7 +12,7 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
-
+# TO DO convert database from mysql to sqllite 3 for demo
 * Database initialization
 
 * How to run the test suite
