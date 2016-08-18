@@ -8,13 +8,19 @@
         <option value="lvmig">lvmig</option>
       </select>
   <% end %>
+  <%= form_tag :controller => 'dashboard', :action => 'graph', :method => 'post' do %>
+      <select name="contract">
+        <option value="ks" selected="selected">KS</option>
+        <option value="co">CO</option>
+      </select>
+  <% end %>
   <table class="table">
     <tr>
       <th>CaseID</th>
       <th>CaseName</th>
       <th>Version</th>
       <th>Contract</th>
-      <th>CreateDate</th>
+      <th>ExeDate</th>
       <th>TestResult</th>
     </tr>
 
