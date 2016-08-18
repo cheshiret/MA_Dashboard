@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'dashboard#home'
   get '/graph' => 'dashboard#graph'
   get '/testcase' => 'dashboard#testcase'
+  get '/pagetiming' => 'dashboard#pagetiming'
 
 
   #match '/graph', to: 'dashboard#graph', via: 'get'

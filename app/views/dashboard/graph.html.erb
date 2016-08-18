@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html>
-<div class="container" style="padding-top: 70px" >
-<h2> Test Result</h2>
-
-<table class="table">
-  <tr>
-    <th>CaseID</th>
-    <th>CaseName</th>
-    <th>Machine</th>
-    <th>VERSION</th>
-    <th>TestResult</th>
-  </tr>
-
-  <% @testresult.each do |l| %>
-      <tr>
-        <td><%= l.case_id %></td>
-        <td><%= l.case_name %></td>
-        <td><%= l.machine %></td>
-        <td><%= l.awo_version %></td>
-        <td><%= l.test_result %></td>
-      </tr>
+<div class="container" style="padding-top: 70px">
+  <h2> Test Result</h2>
+  <%= form_tag :controller => 'dashboard', :action => 'graph', :method => 'post' do %>
+      <select name="testenv">
+        <option value="qa5" selected="selected">qa5</option>
+        <option value="lvmig">lvmig</option>
+      </select>
   <% end %>
-</table>
+  <table class="table">
+    <tr>
+      <th>CaseID</th>
+      <th>CaseName</th>
+      <th>Version</th>
+      <th>Contract</th>
+      <th>CreateDate</th>
+      <th>TestResult</th>
+    </tr>
+
+    <% @testresult.each() do |l| %>
+        <tr>
+          <td><%= l.case_id %></td>
+          <td><%= l.casename %></td>
+          <td><%= l.awo_version %></td>
+          <td><%= l.contract %></td>
+          <td><%= l.create_date %></td>
+          <td><%= l.test_result %></td>
+        </tr>
+    <% end %>
+  </table>
 
 </div>
 

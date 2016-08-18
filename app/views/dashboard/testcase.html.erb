@@ -6,13 +6,32 @@
   <ul id="casecount">
     <li><%= @list_count %></li>
   </ul>
-
   <h2>Test Cases List</h2>
-  <ul id="casename">
-    <% @list.each do |c| %>
-        <li><%= c.casename -%></li>
+  <%= form_tag :controller => 'dashboard', :action => 'testcase', :method => 'post' do %>
+      <select name="application">
+        <option value="lm" selected="selected">LM</option>
+        <option value="im">IM</option>
+        <option value="cui">CUI</option>
+      </select>
+  <% end %>
+
+  <table class="table">
+    <tr>
+      <th>CaseID</th>
+      <th>CaseName</th>
+      <th>Timing</th>
+    </tr>
+    <% @list.each() do |c| %>
+        <tr>
+          <td><%= c.id %></td>
+          <td><%= c.casename %></td>
+          <td><%= c.timing %></td>
+        </tr>
+
     <% end %>
-  </ul>
+
+  </table>
+
 
 </div>
 </html>

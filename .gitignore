@@ -33,3 +33,6 @@
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
+
+# svn folder
+.svn/

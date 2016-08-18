@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<div class="container" style="padding-top: 70px">
+
+  <h2>Slow Page List</h2>
+  <%= form_tag :controller => 'dashboard', :action => 'pagetiming', :method => 'post' do %>
+      <select name="testenv">
+        <option value="qa5" selected="selected">qa5</option>
+        <option value="lvmig">lvmig</option>
+      </select>
+<% end %>
+  <table class="table">
+    <tr>
+      <th>PageName</th>
+      <th>LoadingTime</th>
+      <th>BuildVersion</th>
+      <th>RecordDate</th>
+      <th>ENV</th>
+      <th>CaseName</th>
+    </tr>
+    <% @result.each() do |c| %>
+        <tr>
+          <td><%= c.pagename %></td>
+          <td><%= c.loadingtime %></td>
+          <td><%= c.buildversion %></td>
+          <td><%= c.latestrecorddate %></td>
+          <td><%= c.env %></td>
+          <td><%= c.casename %></td>
+        </tr>
+
+    <% end %>
+
+  </table>
+
+
+</div>
+</html>
