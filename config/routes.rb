@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/graph' => 'dashboard#graph'
   get '/testcase' => 'dashboard#testcase'
   get '/pagetiming' => 'dashboard#pagetiming'
+  get '/qalib' => 'dashboard#qalib'
 
 
   #match '/graph', to: 'dashboard#graph', via: 'get'

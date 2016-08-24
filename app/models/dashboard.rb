@@ -32,4 +32,13 @@ module Dashboard
     # belongs_to :testcase
     # :foreign_key => "case_id"
   end
+
+  class QALib < ActiveRecord::Base
+    establish_connection :development
+    self.table_name = 'code_base_lib'
+
+    def self.search(search)
+      where("cb_base_class LIKE ?","%#{search}%")
+    end
+  end
 end

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<div class="container" style="padding-top: 70px">
+
+  <h2>Code Base Lib</h2>
+  <%= form_tag(qalib_path, :method => "get", id: "cb-search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Code Base" %>
+      <%= submit_tag "Search" %>
+  <% end %>
+<hr />
+  <table class="table">
+    <tr>
+      <th>CB_ID</th>
+      <th>CB_NAME</th>
+      <th>CB_CLASS</th>
+      <th>CB_BASE_CLASS</th>
+    </tr>
+    <% @qalib.each() do |s| %>
+      <tr>
+        <td><%= s.cb_id %></td>
+        <td><%= s.cb_name %></td>
+        <td><%= s.cb_class %></td>
+        <td><%= s.cb_base_class %></td>
+
+      </tr>
+    <% end %>
+  </table>
+
+</div>
+</html>

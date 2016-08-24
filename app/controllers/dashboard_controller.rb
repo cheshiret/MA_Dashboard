@@ -51,5 +51,14 @@ class DashboardController < ApplicationController
                   .group("pagename, env, buildversion")
                   .order("pagename, buildversion, loadingtime desc")
   end
+
+  def qalib
+    @qalib = Dashboard::QALib.none
+    if params[:search]
+      @qalib = Dashboard::QALib.search(params[:search]).order("cb_class, cb_id")
+    else
+      @qalib = Dashboard::QALib.none
+    end
+  end
 end
 
