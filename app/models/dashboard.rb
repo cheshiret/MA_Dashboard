@@ -1,6 +1,7 @@
 module Dashboard
   class Dashboard < ActiveRecord::Base
-
+    establish_connection :development
+    self.table_name = 'app_status'
   end
 
   class TestCase < ActiveRecord::Base

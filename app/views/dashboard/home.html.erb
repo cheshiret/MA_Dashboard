@@ -3,9 +3,29 @@
 <div class="container">
 <div class="jumbotron">
   <p class="lead">
-  <h1>Welcome to Automation Dashboard Page!</h1>
+  <h2>Welcome to Migration Automation Dashboard!</h2>
   </p>
 </div>
+
+  <table class="table">
+    <tr>
+      <th>Env</th>
+      <th>Build Ver.</th>
+      <th>DB</th>
+      <th>Status</th>
+      <th>Date</th>
+    </tr>
+    <% @dashboard.each() do |d| %>
+        <tr>
+          <td><%= d.env %></td>
+          <td><%= d.build_version %></td>
+          <td><%= d.db %></td>
+          <td><%= bool_to_glyph(d.status) %></td>
+          <td><%= d.date %></td>
+        </tr>
+
+    <% end %>
+    </table>
 </div>
 </html>
 

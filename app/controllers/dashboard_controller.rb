@@ -1,5 +1,11 @@
 class DashboardController < ApplicationController
   def home
+    @dashsubquery = Dashboard::Dashboard.select("*")
+    @dashsubquery = @dashsubquery.order("date desc")
+    @dashboard = Dashboard::Dashboard.select("env, build_version, db, status, date")
+    .from("(#{@dashsubquery.to_sql}) as temp")
+    .group("env")
+    .order("date asc")
     #  @list = ReportDashboard.select("casename") #.where(id: 10)
     #   @list_count = @list.count
     #   @subquery = TestResult.select("*")
