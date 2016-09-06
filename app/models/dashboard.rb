@@ -41,5 +41,6 @@ module Dashboard
     def self.search(search)
       where("cb_base_class LIKE ?","%#{search}%")
     end
+
   end
 end

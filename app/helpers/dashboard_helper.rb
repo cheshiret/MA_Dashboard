@@ -14,5 +14,11 @@ module DashboardHelper
       end
 
   end
+  def exedecryptoutil(arg2)
+    arg1="com.activenetwork.qa.awo.testcases.AwoCryptoUtil"
+    result = `java -cp "C:\\migrtest\\Migrtest\\*;" #{arg1} "#{arg2}"`
+    return result
+  end
+
 
 end

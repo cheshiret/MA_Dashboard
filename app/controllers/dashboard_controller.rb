@@ -65,6 +65,9 @@ class DashboardController < ApplicationController
     else
       @qalib = Dashboard::QALib.none
     end
+
   end
+
+
 end
 

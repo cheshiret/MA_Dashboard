@@ -26,6 +26,19 @@
       </tr>
     <% end %>
   </table>
+  <div>
+    <%= form_tag(qalib_path, :method => "get", id: "cb-search-form") do %>
+        <%= text_field_tag 'idcode', nil, placeholder: 'Input Encryption Code'%>
+        <%= submit_tag "Decode" %>
+
+    <% end %>
+    <p>
+      <%= exedecryptoutil(params[:idcode]) %>
+    </p>
+
+
+
+  </div>
 
 </div>
 </html>
