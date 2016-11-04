@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<div class="container" style="padding-top: 70px">
+  <h2>Configuration</h2>
+  <%= form_tag :controller => 'configuration', :action => 'view', :method => 'post' do %>
+      <select name="contract">
+        <option value="ks" selected="selected">KS</option>
+        <option value="co">CO</option>
+      </select>
+  <% end %>
+  <table class="table">
+    <tr>
+      <th>Description</th>
+      <th>Name</th>
+    </tr>
+
+    <% @result.each() do |l| %>
+        <tr>
+          <td><%= l.case_id %></td>
+          <td><%= l.casename %></td>
+
+        </tr>
+    <% end %>
+  </table>
+
+</div>
+
+</html>

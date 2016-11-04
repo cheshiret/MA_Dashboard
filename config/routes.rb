@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :dashboard
+  resources :dashboard, :configuration
   root to: 'dashboard#home'
   get '/graph' => 'dashboard#graph'
   get '/testcase' => 'dashboard#testcase'
   get '/pagetiming' => 'dashboard#pagetiming'
   get '/qalib' => 'dashboard#qalib'
+  get '/view' => 'configuration#view'
 
 
   #match '/graph', to: 'dashboard#graph', via: 'get'

@@ -49,3 +49,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 #http://stackoverflow.com/questions/18371318/installing-bootstrap-3-on-rails-app
 #gem 'bootstrap-sass', '~> 3.2.0'
 #gem 'autoprefixer-rails'
+
+##need fix the installation issue for oracle connection
+#gem 'ruby-oci8', '~> 2.1.0'
+#gem 'activerecord-oracle_enhanced-adapter', '~> 1.5.0'

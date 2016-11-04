@@ -36,3 +36,9 @@
 
 # svn folder
 .svn/
+public/assets/*.js
+public/assets/*.gz
+public/assets/*.css
+public/assets/*.json
+Gemfile.lock
+db/migrate/*
